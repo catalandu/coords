@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Coords Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" style="display: none;">
+        <div class="panel">
+            <div class="header">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <h2>Player Coordinates</h2>
+                <button class="close-btn" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="content">
+                <div class="coord-item">
+                    <div class="coord-label">vector3</div>
+                    <div class="coord-value-container">
+                        <input type="text" id="val-vector3" readonly>
+                        <button class="copy-btn" data-target="val-vector3"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+
+                <div class="coord-item">
+                    <div class="coord-label">vector4</div>
+                    <div class="coord-value-container">
+                        <input type="text" id="val-vector4" readonly>
+                        <button class="copy-btn" data-target="val-vector4"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+
+                <div class="coord-item">
+                    <div class="coord-label">x, y, z</div>
+                    <div class="coord-value-container">
+                        <input type="text" id="val-xyz" readonly>
+                        <button class="copy-btn" data-target="val-xyz"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+
+                <div class="coord-item">
+                    <div class="coord-label">Lua Table</div>
+                    <div class="coord-value-container">
+                        <input type="text" id="val-table" readonly>
+                        <button class="copy-btn" data-target="val-table"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+
+                <div class="coord-item">
+                    <div class="coord-label">Heading</div>
+                    <div class="coord-value-container">
+                        <input type="text" id="val-heading" readonly>
+                        <button class="copy-btn" data-target="val-heading"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="toast" id="toast">Copié dans le presse-papiers !</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
